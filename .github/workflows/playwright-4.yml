@@ -1,0 +1,90 @@
+name: Playwright 2-Job Ordered Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+
+  # JOB 1
+  smoke:
+    name: Smoke Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run smoke tests
+        run: |
+          npx playwright test tests/error-scenarios.spec.ts --grep "@smoke"
+
+      - name: Upload smoke report
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-report
+          path: playwright-report/
+
+  # JOB 2
+  full-suite:
+    name: Full Suite - ${{ matrix.spec }}
+    needs: smoke
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        spec:
+          - error-scenarios
+          - performance
+          - security-probe
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run matrix test suite
+        run: |
+          npx playwright test --grep-invert "@smoke" tests/${{ matrix.spec }}.spec.ts
+
+      - name: Upload test artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.spec }}
+          path: playwright-report/
+
+      - name: Add summary table
+        run: |
+          echo "| Spec File | Result |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| ${{ matrix.spec }} | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
