@@ -111,7 +111,7 @@
           "specs": [
             {
               "title": "@smoke GET /status/200 returns 200",
-              "ok": false,
+              "ok": true,
               "tags": [
                 "smoke"
               ],
@@ -126,54 +126,24 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 2017,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m502\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m502\u001b[39m\n    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\error-scenarios.spec.ts:12:31",
-                        "location": {
-                          "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\error-scenarios.spec.ts",
-                          "column": 31,
-                          "line": 12
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://httpbin.org/status/200'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     expect(body\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\error-scenarios.spec.ts",
-                            "column": 31,
-                            "line": 12
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m502\u001b[39m\n\n\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://httpbin.org/status/200'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m     \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     expect(body\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\error-scenarios.spec.ts:12:31\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 1218,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:25.367Z",
+                      "startTime": "2026-05-20T11:59:04.442Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\test-results\\error-scenarios-Error-Scen-8f799--GET-status-200-returns-200-error-scenarios\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\error-scenarios.spec.ts",
-                        "column": 31,
-                        "line": 12
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "461e73bb101b4db20964-c66250481fff5cdade04",
               "file": "error-scenarios.spec.ts",
               "line": 9,
-              "column": 7
+              "column": 9
             },
             {
               "title": "@smoke GET /status/400 returns 400",
@@ -193,12 +163,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2037,
+                      "duration": 1182,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:25.378Z",
+                      "startTime": "2026-05-20T11:59:04.357Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -209,7 +179,7 @@
               "id": "461e73bb101b4db20964-35794ffb441ca4cacf11",
               "file": "error-scenarios.spec.ts",
               "line": 19,
-              "column": 7
+              "column": 9
             },
             {
               "title": "@smoke GET /status/404 returns 404",
@@ -229,12 +199,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1935,
+                      "duration": 2701,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:25.461Z",
+                      "startTime": "2026-05-20T11:59:04.357Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -245,7 +215,7 @@
               "id": "461e73bb101b4db20964-20301888b942815b6f5b",
               "file": "error-scenarios.spec.ts",
               "line": 26,
-              "column": 7
+              "column": 9
             },
             {
               "title": "@smoke GET /status/500 returns 500",
@@ -265,12 +235,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2087,
+                      "duration": 2700,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:25.333Z",
+                      "startTime": "2026-05-20T11:59:04.463Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -281,7 +251,7 @@
               "id": "461e73bb101b4db20964-8275eafcbd57341d39b6",
               "file": "error-scenarios.spec.ts",
               "line": 33,
-              "column": 7
+              "column": 9
             },
             {
               "title": "@smoke GET /status/422 returns 422",
@@ -298,15 +268,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 329,
+                      "duration": 272,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:27.629Z",
+                      "startTime": "2026-05-20T11:59:05.726Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -317,7 +287,7 @@
               "id": "461e73bb101b4db20964-a99928c1f3ceff537b07",
               "file": "error-scenarios.spec.ts",
               "line": 40,
-              "column": 7
+              "column": 9
             },
             {
               "title": "DummyJSON /auth/me without token returns 401",
@@ -332,15 +302,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 575,
+                      "duration": 307,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:27.635Z",
+                      "startTime": "2026-05-20T11:59:05.810Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -351,7 +321,7 @@
               "id": "461e73bb101b4db20964-054533fe6450163430cf",
               "file": "error-scenarios.spec.ts",
               "line": 47,
-              "column": 7
+              "column": 9
             },
             {
               "title": "DummyJSON /auth/me with wrong token returns 401",
@@ -369,12 +339,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 575,
+                      "duration": 318,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:27.641Z",
+                      "startTime": "2026-05-20T11:59:06.028Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -385,7 +355,7 @@
               "id": "461e73bb101b4db20964-dfe86661950c8adb137f",
               "file": "error-scenarios.spec.ts",
               "line": 58,
-              "column": 7
+              "column": 9
             },
             {
               "title": "DummyJSON login with empty credentials returns 400",
@@ -400,15 +370,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 573,
+                      "duration": 274,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:30.245Z",
+                      "startTime": "2026-05-20T11:59:06.135Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -419,7 +389,7 @@
               "id": "461e73bb101b4db20964-a99e67ac49ecd808f6cb",
               "file": "error-scenarios.spec.ts",
               "line": 73,
-              "column": 7
+              "column": 9
             },
             {
               "title": "DummyJSON login with missing password field returns 400",
@@ -434,15 +404,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 339,
+                      "duration": 274,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:28.005Z",
+                      "startTime": "2026-05-20T11:59:06.369Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -453,7 +423,7 @@
               "id": "461e73bb101b4db20964-cce059fab11e9709e99d",
               "file": "error-scenarios.spec.ts",
               "line": 85,
-              "column": 7
+              "column": 9
             },
             {
               "title": "JSONPlaceholder GET /posts/0 — document actual response",
@@ -468,10 +438,10 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 137,
+                      "duration": 56,
                       "errors": [],
                       "stdout": [
                         {
@@ -483,7 +453,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:28.266Z",
+                      "startTime": "2026-05-20T11:59:06.425Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -494,7 +464,7 @@
               "id": "461e73bb101b4db20964-bd2551a73a1dad9c7ea5",
               "file": "error-scenarios.spec.ts",
               "line": 96,
-              "column": 7
+              "column": 9
             },
             {
               "title": "JSONPlaceholder GET /posts/999 — boundary",
@@ -509,15 +479,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 110,
+                      "duration": 25,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:28.280Z",
+                      "startTime": "2026-05-20T11:59:06.505Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -528,7 +498,7 @@
               "id": "461e73bb101b4db20964-a6ea04bda4cefd173e5b",
               "file": "error-scenarios.spec.ts",
               "line": 110,
-              "column": 7
+              "column": 9
             },
             {
               "title": "JSONPlaceholder GET /posts/100 — last valid",
@@ -543,15 +513,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 137,
+                      "duration": 31,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:28.414Z",
+                      "startTime": "2026-05-20T11:59:06.549Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -562,7 +532,7 @@
               "id": "461e73bb101b4db20964-fe3fef3b735dc04f60c0",
               "file": "error-scenarios.spec.ts",
               "line": 117,
-              "column": 7
+              "column": 9
             },
             {
               "title": "JSONPlaceholder GET /posts/101 — beyond last",
@@ -577,15 +547,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 65,
+                      "duration": 24,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:28.483Z",
+                      "startTime": "2026-05-20T11:59:06.594Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -596,7 +566,7 @@
               "id": "461e73bb101b4db20964-9d9eefa533b0b15f488b",
               "file": "error-scenarios.spec.ts",
               "line": 128,
-              "column": 7
+              "column": 9
             },
             {
               "title": "RestCountries invalid country name returns 404",
@@ -611,15 +581,15 @@
                   "projectName": "error-scenarios",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 730,
+                      "duration": 755,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:28.515Z",
+                      "startTime": "2026-05-20T11:59:06.641Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -630,7 +600,7 @@
               "id": "461e73bb101b4db20964-17d0dcac2d0422ca4dfc",
               "file": "error-scenarios.spec.ts",
               "line": 135,
-              "column": 7
+              "column": 9
             },
             {
               "title": "Open-Meteo missing required param — document actual",
@@ -648,7 +618,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 957,
+                      "duration": 721,
                       "errors": [],
                       "stdout": [
                         {
@@ -660,7 +630,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:28.639Z",
+                      "startTime": "2026-05-20T11:59:06.662Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -671,7 +641,7 @@
               "id": "461e73bb101b4db20964-fe723684ea6d905c750f",
               "file": "error-scenarios.spec.ts",
               "line": 144,
-              "column": 7
+              "column": 9
             }
           ]
         }
@@ -703,19 +673,19 @@
                   "projectName": "performance",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 4,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3596,
+                      "duration": 4093,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "delay/2 actual time: \u001b[33m3530\u001b[39m ms\n"
+                          "text": "delay/2 actual time: \u001b[33m4063\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:31.520Z",
+                      "startTime": "2026-05-20T11:59:08.273Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -726,11 +696,11 @@
               "id": "b15d6361b2fc38288977-4446c752f95e7ed2c31f",
               "file": "performance.spec.ts",
               "line": 21,
-              "column": 7
+              "column": 9
             },
             {
               "title": "HTTPBin delay/1 timing bounds",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -741,60 +711,30 @@
                   "projectName": "performance",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 5,
                       "parallelIndex": 3,
-                      "status": "failed",
-                      "duration": 3881,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m3823\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m3823\u001b[39m\n    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\performance.spec.ts:45:22",
-                        "location": {
-                          "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\performance.spec.ts",
-                          "column": 22,
-                          "line": 45
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     expect(duration)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m1000\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     expect(duration)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m\n \u001b[90m 48 |\u001b[39m   \u001b[90m// C\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\performance.spec.ts",
-                            "column": 22,
-                            "line": 45
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3000\u001b[39m\nReceived:   \u001b[31m3823\u001b[39m\n\n\u001b[0m \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     expect(duration)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m1000\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     expect(duration)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m\n \u001b[90m 48 |\u001b[39m   \u001b[90m// C\u001b[39m\u001b[0m\n\u001b[2m    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\performance.spec.ts:45:22\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 2281,
+                      "errors": [],
                       "stdout": [
                         {
-                          "text": "delay/1 actual time: \u001b[33m3823\u001b[39m ms\n"
+                          "text": "delay/1 actual time: \u001b[33m2246\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:32.026Z",
+                      "startTime": "2026-05-20T11:59:08.513Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\test-results\\performance-SLA-Validation-9f747-TPBin-delay-1-timing-bounds-performance\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\performance.spec.ts",
-                        "column": 22,
-                        "line": 45
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "b15d6361b2fc38288977-8c21ad0602fb43ea66b1",
               "file": "performance.spec.ts",
               "line": 35,
-              "column": 7
+              "column": 9
             },
             {
               "title": "DummyJSON all products within SLA",
@@ -809,19 +749,19 @@
                   "projectName": "performance",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 6,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 785,
+                      "duration": 896,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "DummyJSON products time: \u001b[33m720\u001b[39m ms\n"
+                          "text": "DummyJSON products time: \u001b[33m867\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:32.280Z",
+                      "startTime": "2026-05-20T11:59:08.608Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -832,7 +772,7 @@
               "id": "b15d6361b2fc38288977-503279ee55a12ff961d4",
               "file": "performance.spec.ts",
               "line": 49,
-              "column": 7
+              "column": 9
             },
             {
               "title": "JSONPlaceholder posts SLA",
@@ -847,19 +787,19 @@
                   "projectName": "performance",
                   "results": [
                     {
-                      "workerIndex": 8,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 259,
+                      "duration": 189,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "JSONPlaceholder posts time: \u001b[33m199\u001b[39m ms\n"
+                          "text": "JSONPlaceholder posts time: \u001b[33m151\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:33.199Z",
+                      "startTime": "2026-05-20T11:59:08.568Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -870,7 +810,7 @@
               "id": "b15d6361b2fc38288977-b5302e0a11b4d02a91a9",
               "file": "performance.spec.ts",
               "line": 66,
-              "column": 7
+              "column": 9
             },
             {
               "title": "RestCountries all countries SLA",
@@ -886,18 +826,18 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1136,
+                      "duration": 1154,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "RestCountries time: \u001b[33m1089\u001b[39m ms\n"
+                          "text": "RestCountries time: \u001b[33m1133\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:33.240Z",
+                      "startTime": "2026-05-20T11:59:08.864Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -908,7 +848,7 @@
               "id": "b15d6361b2fc38288977-ab191be4905235a73634",
               "file": "performance.spec.ts",
               "line": 83,
-              "column": 7
+              "column": 9
             },
             {
               "title": "3-run timing consistency for DummyJSON products",
@@ -923,25 +863,25 @@
                   "projectName": "performance",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 0,
+                      "workerIndex": 6,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2926,
+                      "duration": 1102,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Run 1: \u001b[33m827\u001b[39m ms\n"
+                          "text": "Run 1: \u001b[33m523\u001b[39m ms\n"
                         },
                         {
-                          "text": "Run 2: \u001b[33m1167\u001b[39m ms\n"
+                          "text": "Run 2: \u001b[33m279\u001b[39m ms\n"
                         },
                         {
-                          "text": "Run 3: \u001b[33m902\u001b[39m ms\n"
+                          "text": "Run 3: \u001b[33m279\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:33.589Z",
+                      "startTime": "2026-05-20T11:59:09.590Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -952,7 +892,7 @@
               "id": "b15d6361b2fc38288977-9054717e4f782c84e4fd",
               "file": "performance.spec.ts",
               "line": 102,
-              "column": 7
+              "column": 9
             },
             {
               "title": "Open-Meteo London response within SLA",
@@ -968,18 +908,18 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 838,
+                      "duration": 708,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Open-Meteo London time: \u001b[33m811\u001b[39m ms\n"
+                          "text": "Open-Meteo London time: \u001b[33m695\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:34.429Z",
+                      "startTime": "2026-05-20T11:59:10.041Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -990,7 +930,7 @@
               "id": "b15d6361b2fc38288977-b8f662ba92efd83f1678",
               "file": "performance.spec.ts",
               "line": 135,
-              "column": 7
+              "column": 9
             },
             {
               "title": "DummyJSON delay endpoint: ?delay=500 adds at least 400ms",
@@ -1005,19 +945,19 @@
                   "projectName": "performance",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 6,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 798,
+                      "duration": 774,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "DummyJSON delay=500 actual time: \u001b[33m776\u001b[39m ms\n"
+                          "text": "DummyJSON delay=500 actual time: \u001b[33m760\u001b[39m ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:35.321Z",
+                      "startTime": "2026-05-20T11:59:10.711Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1028,7 +968,7 @@
               "id": "b15d6361b2fc38288977-be6169beaf3c4f35f37c",
               "file": "performance.spec.ts",
               "line": 154,
-              "column": 7
+              "column": 9
             }
           ]
         }
@@ -1044,7 +984,7 @@
         {
           "title": "Security and Header Tests",
           "file": "security-probe.spec.ts",
-          "line": 5,
+          "line": 4,
           "column": 6,
           "specs": [
             {
@@ -1060,15 +1000,15 @@
                   "projectName": "security-probe",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 2,
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2111,
+                      "duration": 1896,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:37.018Z",
+                      "startTime": "2026-05-20T11:59:11.667Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1078,12 +1018,12 @@
               ],
               "id": "b8be559a7cd6cb9e62da-84c09eadb63816c27629",
               "file": "security-probe.spec.ts",
-              "line": 8,
-              "column": 7
+              "line": 7,
+              "column": 9
             },
             {
               "title": "DummyJSON /auth/me headers audit",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1094,56 +1034,26 @@
                   "projectName": "security-probe",
                   "results": [
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 9,
                       "parallelIndex": 3,
-                      "status": "failed",
-                      "duration": 872,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m401\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts:71:31",
-                        "location": {
-                          "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts",
-                          "column": 31,
-                          "line": 71
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 69 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m\n \u001b[90m 73 |\u001b[39m     \u001b[36mconst\u001b[39m headers \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mheaders()\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts",
-                            "column": 31,
-                            "line": 71
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n\n\u001b[0m \u001b[90m 69 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 70 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m\n \u001b[90m 73 |\u001b[39m     \u001b[36mconst\u001b[39m headers \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mheaders()\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts:71:31\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 943,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:38.205Z",
+                      "startTime": "2026-05-20T11:59:11.837Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\test-results\\security-probe-Security-an-ac294-yJSON-auth-me-headers-audit-security-probe\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts",
-                        "column": 31,
-                        "line": 71
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "b8be559a7cd6cb9e62da-f6ddd1a98728b704996a",
               "file": "security-probe.spec.ts",
-              "line": 45,
-              "column": 7
+              "line": 46,
+              "column": 9
             },
             {
               "title": "Content-Type negotiation — JSON always returned",
@@ -1158,19 +1068,19 @@
                   "projectName": "security-probe",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 10,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 241,
+                      "duration": 166,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Finding: DummyJSON returns JSON even when Accept: application/xml is sent\n"
+                          "text": "Finding: DummyJSON returns JSON even when Accept: application/xml is sent. Actual Content-Type received: application/json; charset=utf-8\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:38.254Z",
+                      "startTime": "2026-05-20T11:59:12.386Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1180,12 +1090,12 @@
               ],
               "id": "b8be559a7cd6cb9e62da-45e0da9c326c9abfa313",
               "file": "security-probe.spec.ts",
-              "line": 86,
-              "column": 7
+              "line": 110,
+              "column": 9
             },
             {
               "title": "CORS header present on DummyJSON response",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1196,56 +1106,26 @@
                   "projectName": "security-probe",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 379,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts:119:52",
-                        "location": {
-                          "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts",
-                          "column": 52,
-                          "line": 119
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 117 |\u001b[39m     \u001b[36mconst\u001b[39m headers \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mheaders()\u001b[33m;\u001b[39m\n \u001b[90m 118 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m     expect(headers[\u001b[32m'access-control-allow-origin'\u001b[39m])\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 121 |\u001b[39m\n \u001b[90m 122 |\u001b[39m   \u001b[90m// E\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts",
-                            "column": 52,
-                            "line": 119
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 117 |\u001b[39m     \u001b[36mconst\u001b[39m headers \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mheaders()\u001b[33m;\u001b[39m\n \u001b[90m 118 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m     expect(headers[\u001b[32m'access-control-allow-origin'\u001b[39m])\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 121 |\u001b[39m\n \u001b[90m 122 |\u001b[39m   \u001b[90m// E\u001b[39m\u001b[0m\n\u001b[2m    at D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts:119:52\u001b[22m"
-                        }
-                      ],
+                      "workerIndex": 11,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1113,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:38.699Z",
+                      "startTime": "2026-05-20T11:59:13.220Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\test-results\\security-probe-Security-an-7070c-esent-on-DummyJSON-response-security-probe\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\API_Hac2\\api-assessment-Playwright_2-Shubham\\tests\\security-probe.spec.ts",
-                        "column": 52,
-                        "line": 119
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "b8be559a7cd6cb9e62da-b26ec40cdbe2711e861e",
               "file": "security-probe.spec.ts",
-              "line": 109,
-              "column": 7
+              "line": 135,
+              "column": 9
             },
             {
               "title": "HTTPBin anything echoes full request",
@@ -1260,15 +1140,15 @@
                   "projectName": "security-probe",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 10,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1530,
+                      "duration": 1028,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:38.664Z",
+                      "startTime": "2026-05-20T11:59:12.620Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1278,8 +1158,8 @@
               ],
               "id": "b8be559a7cd6cb9e62da-45dc571833b764278e3f",
               "file": "security-probe.spec.ts",
-              "line": 123,
-              "column": 7
+              "line": 156,
+              "column": 9
             },
             {
               "title": "UUID endpoint returns unique values",
@@ -1294,25 +1174,25 @@
                   "projectName": "security-probe",
                   "results": [
                     {
-                      "workerIndex": 13,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2281,
+                      "duration": 1661,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "UUID 1: f37ee434-9642-4ee8-8a0d-603a45e46427\n"
+                          "text": "UUID 1: 83d848fd-ae72-456f-b6f0-8615a6683b4d\n"
                         },
                         {
-                          "text": "UUID 2: a2e053f2-7d00-48a2-bdf3-c0df3e5a7ac6\n"
+                          "text": "UUID 2: 86ac5e2c-1dd2-4a8f-a2f0-4e5e3174a9f7\n"
                         },
                         {
-                          "text": "UUID 3: 2a34aa51-f8c1-489c-9bd0-6c8319c7dc0f\n"
+                          "text": "UUID 3: 73c0ae5d-a27c-4454-8019-ca34a0a8286f\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:40.687Z",
+                      "startTime": "2026-05-20T11:59:12.857Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1322,8 +1202,8 @@
               ],
               "id": "b8be559a7cd6cb9e62da-f3886ce71ef4d2566f9d",
               "file": "security-probe.spec.ts",
-              "line": 157,
-              "column": 7
+              "line": 190,
+              "column": 9
             },
             {
               "title": "Large payload response handled correctly",
@@ -1338,19 +1218,19 @@
                   "projectName": "security-probe",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 3,
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 998,
+                      "duration": 700,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Comments API time: \u001b[33m257\u001b[39m ms\n"
+                          "text": "Comments API response time: 57ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-20T10:33:40.738Z",
+                      "startTime": "2026-05-20T11:59:13.646Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1360,8 +1240,8 @@
               ],
               "id": "b8be559a7cd6cb9e62da-a054da432dcc0f91be05",
               "file": "security-probe.spec.ts",
-              "line": 195,
-              "column": 7
+              "line": 233,
+              "column": 9
             }
           ]
         }
@@ -1370,11 +1250,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-20T10:33:22.434Z",
-    "duration": 20733.909,
-    "expected": 26,
+    "startTime": "2026-05-20T11:59:03.142Z",
+    "duration": 11452.027,
+    "expected": 30,
     "skipped": 0,
-    "unexpected": 4,
+    "unexpected": 0,
     "flaky": 0
   }
 }
